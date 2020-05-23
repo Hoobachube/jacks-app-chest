@@ -1,100 +1,153 @@
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-</head>
+  <body>
+    <div id="navbar"></div>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script id="navbar-template" type="text/x-handlebars-template">
+      <ul>
+        {{#each this}}
+          <li>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <div class="container">
+                <a class="navbar-brand" href="index.html">
+                  Jack's App Chest
+                </a>
+                <button
+                  class="navbar-toggler navbar-toggler-right"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navb"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Jack's App Chest</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navb">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+                <div class="collapse navbar-collapse" id="navb">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">
+                        Home
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="bio.html">
+                        Bio
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="apps.html">
+                        Apps
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="cv.html">
+                        CV
+                      </a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input
+                      class="form-control mr-sm-2"
+                      type="text"
+                      placeholder="Search"
+                    />
+                    <button class="btn btn-success my-2 my-sm-0" type="button">
+                      Search
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </nav>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="bio.html">Bio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="apps.html">Apps</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cv.html">CV</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-success my-2 my-sm-0" type="button">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div id="firstCarousel" class="carousel slide" data-ride="carousel">
-      <ul class="carousel-indicators">
-        <li data-target="#firstCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#firstCarousel" data-slide-to="1"></li>
-        <li data-target="#firstCarousel" data-slide-to="2"></li>
+        {{/each}}
       </ul>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://via.placeholder.com/1200x600/0000FF/808080" width="100%">
+    </script>
+    <script src="script.js"></script>
+
+    <div class="container">
+      <div id="firstCarousel" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li
+            data-target="#firstCarousel"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#firstCarousel" data-slide-to="1"></li>
+          <li data-target="#firstCarousel" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://via.placeholder.com/1200x600/0000FF/808080"
+              width="100%"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://via.placeholder.com/1200x600/FF0000/FFFFFF"
+              width="100%"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://via.placeholder.com/1200x600/000000/FFFFFF"
+              width="100%"
+            />
+          </div>
         </div>
-        <div class="carousel-item">
-          <img src="https://via.placeholder.com/1200x600/FF0000/FFFFFF" width="100%">
-        </div>
-        <div class="carousel-item">
-          <img src="https://via.placeholder.com/1200x600/000000/FFFFFF" width="100%">
-        </div>
+        <a
+          class="carousel-control-prev"
+          href="#firstCarousel"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#firstCarousel"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </a>
       </div>
-      <a class="carousel-control-prev" href="#firstCarousel" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#firstCarousel" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
     </div>
+    <div class="container">
+      <p>
+        For the last time, I don't like lilacs! Your 'first' wife was the one
+        who liked lilacs! In our darkest hour, we can stand erect, with proud
+        upthrust bosoms. It's just like the story of the grasshopper and the
+        octopus. All year long, the grasshopper kept burying acorns for winter,
+        while the octopus mooched off his girlfriend and watched TV. But then
+        the winter came, and the grasshopper died, and the octopus ate all his
+        acorns. Also he got a race car. Is any of this getting through to you?
+      </p>
+      <p>
+        You guys realize you live in a sewer, right? Five hours? Aw, man!
+        Couldn't you just get me the death penalty? Tell her you just want to
+        talk. It has nothing to do with mating. Why would a robot need to drink?
+      </p>
+      <p>
+        I'm sure those windmills will keep them cool. We can't compete with Mom!
+        Her company is big and evil! Ours is small and neutral! Goodbye, cruel
+        world. Goodbye, cruel lamp. Goodbye, cruel velvet drapes, lined with
+        what would appear to be some sort of cruel muslin and the cute little
+        pom-pom curtain pull cords. Cruel though they may be…
+      </p>
 
-
-
-
-  </div>
-  <div class="container">
-    <p>
-      For the last time, I don't like lilacs! Your 'first' wife was the one who liked lilacs!
-      In our darkest hour, we can stand erect, with proud upthrust bosoms. It's just like the story of the grasshopper
-      and
-      the octopus. All year long, the grasshopper kept burying acorns for winter, while the octopus mooched off his
-      girlfriend and watched TV. But then the winter came, and the grasshopper died, and the octopus ate all his acorns.
-      Also he got a race car. Is any of this getting through to you?
-    </p>
-    <p>
-      You guys realize you live in a sewer, right? Five hours? Aw, man! Couldn't you just get me the death penalty? Tell
-      her you just want to talk. It has nothing to do with mating. Why would a robot need to drink?
-    </p>
-    <p>I'm sure those windmills will keep them cool.
-      We can't compete with Mom! Her company is big and evil! Ours is small and neutral! Goodbye, cruel world. Goodbye,
-      cruel lamp. Goodbye, cruel velvet drapes, lined with what would appear to be some sort of cruel muslin and the
-      cute
-      little pom-pom curtain pull cords. Cruel though they may be…
-    </p>
-
-    <p>Good man. Nixon's pro-war and pro-family.
-      We need rest. The spirit is willing, but the flesh is spongy and bruised.
-      Why yes! Thanks for noticing.
-    </p>
-  </div>
-</body>
-
-
+      <p>
+        Good man. Nixon's pro-war and pro-family. We need rest. The spirit is
+        willing, but the flesh is spongy and bruised. Why yes! Thanks for
+        noticing.
+      </p>
+    </div>
+  </body>
 </html>
