@@ -1,4 +1,22 @@
 .app-page-heading {
-    text-align: center;
-    margin: 5px 0px 23px 0px;
+  text-align: center;
+  margin: 5px 0px 23px 0px;
+}
+
+.calculator-table {
+  max-width: 300px;
+}
+
+.table.calculator-table td {
+  padding: 5px;
+}
+
+.table.calculator-table input[type="button"] {
+  width: 60px;
+  height: 60px;
+}
+
+.form-size {
+  height: 60px;
+  font-size: 20px;
 }
