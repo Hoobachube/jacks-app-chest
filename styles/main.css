@@ -2,3 +2,7 @@
     text-align: center;
     margin: 5px 0px 23px 0px;
 }
+
+.calculator-table {
+    max-width: 300px;
+}
