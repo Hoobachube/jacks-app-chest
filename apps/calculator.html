@@ -13,7 +13,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Jack's App Chest</a>
+        <a class="navbar-brand" href="../index.html">Jack's App Chest</a>
         <button
           class="navbar-toggler navbar-toggler-right"
           type="button"
@@ -51,19 +51,141 @@
         </div>
       </div>
     </nav>
+
     <div class="container pt-3">
       <div class="mx-auto">
-      <h1 text-align: center>Calculator</h1>
-      <p>
-        This particular project I have chosen to design a working calculator.  For the final design this will involve:
+        <h1 style="text-align: center;">Calculator</h1>
+        <p>
+          This particular project I have chosen to design a working calculator.
+          For the final design this will involve: At the moment this is still a
+          work in progress.
+        </p>
         <ul>
           <li>HTML</li>
           <li>java script</li>
-          <li>boootstrap 4</li>
+          <li>bootstrap 4</li>
         </ul>
-         At the moment this is still a work in progress.
-      </p>
       </div>
+    </div>
+
+    <div class="container">
+      <h1>Calculator</h1>
+
+      <form name="calculator">
+        <table>
+          <tr>
+            <td>
+              <input type="text" name="display" id="display" disabled />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input
+                type="button"
+                name="one"
+                value="1"
+                onclick="calculator.display.value +='1'"
+              />
+            </td>
+            <td>
+              <input type="button" name="two” value="2"
+              onclick="calculator.display.value +'2'" />
+            </td>
+
+            <td>
+              <input
+                type="button"
+                name="three"
+                value="3"
+                onclick="calculator.display.value +='3'"
+              />
+            </td>
+
+            <td>
+              <input
+                type="button"
+                class="operator"
+                name="”plus”"
+                value="+"
+                onclick="calculator.display.value"
+                +="+"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input
+                type="button"
+                name="four"
+                value="4"
+                onclick="calculator.display.value +='4'"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                name="five"
+                value="5"
+                onclick="calculator.display.value +='5'"
+              />
+            </td>
+
+            <td>
+              <input
+                type="button"
+                name="six"
+                value="6"
+                onclick="calculator.display.value +='6'"
+              />
+            </td>
+
+            <td>
+              <input
+                type="button"
+                class="operator"
+                name="minus"
+                value="-"
+                onclick="calculator.display.value"
+                +="-"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input
+                type="button"
+                name="seven"
+                value="7"
+                onclick="calculator.display +='7'"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                name="eight"
+                value="8"
+                onclick="calculator.display.value +='8'"
+              />
+            </td>
+
+            <td>
+              <input
+                type="button"
+                name="nine"
+                value="9"
+                onclick="calculator.display.value +='9'"
+              />
+            </td>
+
+            <td>
+              <input type="button" name="”equals”" value="=" />
+            </td>
+          </tr>
+        </table>
+      </form>
     </div>
   </body>
 </html>
