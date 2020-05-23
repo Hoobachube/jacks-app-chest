@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/main.css" />
   </head>
 
   <body>
@@ -73,11 +73,11 @@
       <h1>Calculator</h1>
 
       <form name="calculator">
-        <table class="table table-bordered calculator-table">
+        <table class="table table-borderless calculator-table border">
           <thead>
             <tr>
               <td colspan="4">
-                <input type="text" name="display" id="display" disabled />
+                <input type="text" name="display" id="display" disabled class="form-control form-size" />
               </td>
             </tr>
           </thead>
@@ -89,6 +89,7 @@
                   type="button"
                   name="one"
                   value="1"
+                  class="btn btn-info"
                   onclick="calculator.display.value +='1'"
                 />
               </td>
@@ -97,6 +98,7 @@
                   type="button"
                   name="two"
                   value="2"
+                  class="btn btn-info"
                   onclick="calculator.display.value +='2'"
                 />
               </td>
@@ -106,6 +108,7 @@
                   type="button"
                   name="three"
                   value="3"
+                  class="btn btn-info"
                   onclick="calculator.display.value +='3'"
                 />
               </td>
@@ -113,9 +116,9 @@
               <td>
                 <input
                   type="button"
-                  class="operator"
                   name="plus"
                   value="+"
+                  class="btn btn-warning"
                   onclick="calculator.display.value +='+'"
                 />
               </td>
@@ -127,6 +130,7 @@
                   type="button"
                   name="four"
                   value="4"
+                  class="btn btn-info"
                   onclick="calculator.display.value +='4'"
                 />
               </td>
@@ -135,6 +139,7 @@
                   type="button"
                   name="five"
                   value="5"
+                  class="btn btn-info"
                   onclick="calculator.display.value +='5'"
                 />
               </td>
@@ -144,6 +149,7 @@
                   type="button"
                   name="six"
                   value="6"
+                  class="btn btn-info"
                   onclick="calculator.display.value +='6'"
                 />
               </td>
@@ -151,9 +157,9 @@
               <td>
                 <input
                   type="button"
-                  class="operator"
                   name="minus"
                   value="-"
+                  class="btn btn-warning"
                   onclick="calculator.display.value +='-'"
                 />
               </td>
@@ -165,6 +171,7 @@
                   type="button"
                   name="seven"
                   value="7"
+                  class="btn btn-info"
                   onclick="calculator.display.value +='7'"
                 />
               </td>
@@ -173,6 +180,7 @@
                   type="button"
                   name="eight"
                   value="8"
+                  class="btn btn-info"
                   onclick="calculator.display.value +='8'"
                 />
               </td>
@@ -182,12 +190,18 @@
                   type="button"
                   name="nine"
                   value="9"
+                  class="btn btn-info"
                   onclick="calculator.display.value +='9'"
                 />
               </td>
 
               <td>
-                <input type="button" name="”equals”" value="=" />
+                <input
+                  type="button"
+                  name="”equals”"
+                  value="="
+                  class="btn btn-success"
+                />
               </td>
             </tr>
           </tbody>
