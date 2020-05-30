@@ -77,7 +77,13 @@
           <thead>
             <tr>
               <td colspan="4">
-                <input type="text" name="display" id="display" disabled class="form-control form-size" />
+                <input
+                  type="text"
+                  name="display"
+                  id="display"
+                  disabled
+                  class="form-control form-size"
+                />
               </td>
             </tr>
           </thead>
@@ -198,9 +204,10 @@
               <td>
                 <input
                   type="button"
-                  name="”equals”"
+                  name="equals"
                   value="="
                   class="btn btn-success"
+                  onclick="caculator.display.value = eval(calculator.display.value)"
                 />
               </td>
             </tr>
