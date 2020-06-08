@@ -232,10 +232,11 @@
               </td>
               <td>
                 <input
-                  type="reset"
-                  name="Clear"
-                  value="C"
+                  type="button"
+                  name="backspace"
+                  value="Ce"
                   class="btn btn-danger"
+                  onclick="calculator.display.value = calculator.display.value.substring(0, calculator.display.value.length - 1)"
                 />
               </td>
 
