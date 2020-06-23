@@ -236,7 +236,7 @@
                   name="backspace"
                   value="Ce"
                   class="btn btn-danger"
-                  onclick="calculator.display.value = calculator.display.value.substring(0, calculator.display.value.length - 1)"
+                  onclick="back(0, calculator.display.value.length - 1)"
                 />
               </td>
 
@@ -283,6 +283,17 @@
         document.getElementById("ErrorMessage").classList.add("d-none");
 
       }
+
+
+      function back(value) {
+        calculator.display.value = calculator.display.value.substring(0, calculator.display.value.length - 1);
+        document.getElementById("ErrorMessage").classList.add("d-none");
+
+      }
+
+
+
+
     </script>
   </body>
 </html>
