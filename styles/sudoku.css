@@ -1,0 +1,37 @@
+.sudoku-table {
+  max-width: 700px;
+  padding: 1px;
+  border: solid 5px black;
+  margin: auto;
+}
+
+.grid {
+  align-self: center;
+}
+
+.box {
+  width: 70px;
+  height: 70px;
+  border: 1px solid black;
+  float: left;
+  align-self: center;
+}
+
+.container {
+  margin: auto;
+  align-self: center;
+}
+
+.row {
+  clear: both;
+  align-self: center;
+}
+
+.box-hover:hover {
+  background-color: bisque;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: gray;
+}

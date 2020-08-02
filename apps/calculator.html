@@ -71,7 +71,7 @@
 
     <div class="container">
       <h1>Calculator</h1>
-
+      <div id="ErrorMessage" class="alert alert-danger d-none"></div>
       <form name="calculator">
         <table class="table table-borderless calculator-table border">
           <thead>
@@ -96,7 +96,7 @@
                   name="one"
                   value="1"
                   class="btn btn-info"
-                  onclick="calculator.display.value +='1'"
+                  onclick="answer('1')"
                 />
               </td>
               <td>
@@ -105,7 +105,7 @@
                   name="two"
                   value="2"
                   class="btn btn-info"
-                  onclick="calculator.display.value +='2'"
+                  onclick="answer('2')"
                 />
               </td>
 
@@ -115,7 +115,7 @@
                   name="three"
                   value="3"
                   class="btn btn-info"
-                  onclick="calculator.display.value +='3'"
+                  onclick="answer('3')"
                 />
               </td>
 
@@ -125,7 +125,7 @@
                   name="plus"
                   value="+"
                   class="btn btn-warning"
-                  onclick="calculator.display.value +='+'"
+                  onclick="answer('+')"
                 />
               </td>
             </tr>
@@ -137,7 +137,7 @@
                   name="four"
                   value="4"
                   class="btn btn-info"
-                  onclick="calculator.display.value +='4'"
+                  onclick="answer('4')"
                 />
               </td>
               <td>
@@ -146,7 +146,7 @@
                   name="five"
                   value="5"
                   class="btn btn-info"
-                  onclick="calculator.display.value +='5'"
+                  onclick="answer('5')"
                 />
               </td>
 
@@ -156,7 +156,7 @@
                   name="six"
                   value="6"
                   class="btn btn-info"
-                  onclick="calculator.display.value +='6'"
+                  onclick="answer('6')"
                 />
               </td>
 
@@ -166,7 +166,7 @@
                   name="minus"
                   value="-"
                   class="btn btn-warning"
-                  onclick="calculator.display.value +='-'"
+                  onclick="answer('-')"
                 />
               </td>
             </tr>
@@ -178,7 +178,7 @@
                   name="seven"
                   value="7"
                   class="btn btn-info"
-                  onclick="calculator.display.value +='7'"
+                  onclick="answer('7')"
                 />
               </td>
               <td>
@@ -187,7 +187,7 @@
                   name="eight"
                   value="8"
                   class="btn btn-info"
-                  onclick="calculator.display.value +='8'"
+                  onclick="answer('8')"
                 />
               </td>
 
@@ -197,7 +197,7 @@
                   name="nine"
                   value="9"
                   class="btn btn-info"
-                  onclick="calculator.display.value +='9'"
+                  onclick="answer('9')"
                 />
               </td>
 
@@ -207,7 +207,7 @@
                   name="multiply"
                   value="*"
                   class="btn btn-warning"
-                  onclick="calculator.display.value +='*'"
+                  onclick="answer('*')"
                 />
               </td>
             </tr>
@@ -227,7 +227,7 @@
                   name="zero"
                   value="0"
                   class="btn btn-info"
-                  onclick="calculator.display.value +='0'"
+                  onclick="answer('0')"
                 />
               </td>
               <td>
@@ -236,7 +236,7 @@
                   name="backspace"
                   value="Ce"
                   class="btn btn-danger"
-                  onclick="calculator.display.value = calculator.display.value.substring(0, calculator.display.value.length - 1)"
+                  onclick="back(0, calculator.display.value.length - 1)"
                 />
               </td>
 
@@ -246,7 +246,7 @@
                   name="divide"
                   value="/"
                   class="btn btn-warning"
-                  onclick="calculator.display.value +='/'"
+                  onclick="answer('/')"
                 />
               </td>
             </tr>
@@ -258,7 +258,7 @@
                   name="equals"
                   value="="
                   class="btn btn-success"
-                  onclick="calculator.display.value = eval(calculator.display.value)"
+                  onclick="evalute()"
                 />
               </td>
             </tr>
@@ -266,5 +266,34 @@
         </table>
       </form>
     </div>
+    <script type="text/javascript">
+      function evalute() {
+        try {
+          calculator.display.value = eval(calculator.display.value);
+        } catch (err) {
+          var element = document.getElementById("ErrorMessage");
+
+          element.innerHTML = err;
+          element.classList.remove("d-none");
+        }
+      }
+
+      function answer(value) {
+        calculator.display.value += value;
+        document.getElementById("ErrorMessage").classList.add("d-none");
+
+      }
+
+
+      function back(value) {
+        calculator.display.value = calculator.display.value.substring(0, calculator.display.value.length - 1);
+        document.getElementById("ErrorMessage").classList.add("d-none");
+
+      }
+
+
+
+
+    </script>
   </body>
 </html>

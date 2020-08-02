@@ -25,3 +25,15 @@
   height: 60px;
   font-size: 20px;
 }
+
+.sudoku-table {
+  max-width: 500px;
+  padding:1px;
+}
+
+.table.sudoku-table input[type="text"] {
+  width: 50px;
+  height: 50px;
+  padding:1px;
+
+}
