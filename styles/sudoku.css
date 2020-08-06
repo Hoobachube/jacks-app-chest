@@ -27,6 +27,12 @@
   align-self: center;
 }
 
+.smallGrid {
+  width: 210px;
+  height: 210px;
+  border: 5px solid black;
+}
+
 .box-hover:hover {
   background-color: bisque;
   cursor: pointer;
