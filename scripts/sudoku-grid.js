@@ -22,15 +22,20 @@ class SudokuGrid {
       const row = document.createElement("div");
       row.classList.add("row");
 
+      
+
       for (let x = 0; x < 9; x++) {
         const box = document.createElement("div");
         box.classList.add("box", "box-hover");
 
-        for (let i = 0; i < 3; i++) {
-          const smallGrid = document.createElement("div");
-          var x = i % 3;
-          smallGrid.classList.add("smallGrid");
+        if (x % 3 === 0) {
+          box.classList.add("smallGridx");
         }
+
+        if (y % 3 === 0) {
+          box.classList.add("smallGridy");
+        }
+
 
         if (x == this.state.selected.x && y == this.state.selected.y) {
           box.classList.add("selected");
