@@ -26,6 +26,22 @@ class SudokuGrid {
         const box = document.createElement("div");
         box.classList.add("box", "box-hover");
 
+        if (x % 3 === 0) {
+          box.classList.add("bl-5");
+        }
+
+        if (x === 8) {
+          box.classList.add("br-5");
+        }
+
+        if (y % 3 === 0) {
+          box.classList.add("bt-5");
+        }
+
+        if (y === 8) {
+          box.classList.add("bb-5");
+        }
+
         if (x == this.state.selected.x && y == this.state.selected.y) {
           box.classList.add("selected");
         }
@@ -39,3 +55,5 @@ class SudokuGrid {
     }
   }
 }
+
+//modulous operator %  x%3 === 0

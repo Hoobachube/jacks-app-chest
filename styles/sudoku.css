@@ -9,14 +9,6 @@
   align-self: center;
 }
 
-.box {
-  width: 70px;
-  height: 70px;
-  border: 1px solid black;
-  float: left;
-  align-self: center;
-}
-
 .container {
   margin: auto;
   align-self: center;
@@ -27,9 +19,33 @@
   align-self: center;
 }
 
+.box {
+  width: 70px;
+  height: 70px;
+  border: 1px solid black;
+  float: left;
+  align-self: center;
+}
+
 .box-hover:hover {
   background-color: bisque;
   cursor: pointer;
+}
+
+.bl-5 {
+  border-left: 5px solid black;
+}
+
+.bt-5 {
+  border-top: 5px solid black;
+}
+
+.br-5 {
+  border-right: 5px solid black;
+}
+
+.bb-5 {
+  border-bottom: 5px solid black;
 }
 
 .selected {
