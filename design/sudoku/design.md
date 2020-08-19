@@ -18,6 +18,7 @@
 1. Players **should** be able to reset the game.
 1. Resetting the game **should** generate a new sudoku grid.
 1. ~~The Grid **should** be sectioned correctly. Each 3 by 3 square is divided from each other and each square is bordered.~~
+1. Scratch pad to be implemented for players to mark out possible solutions. 
 
 ### Technical Requirements
 
