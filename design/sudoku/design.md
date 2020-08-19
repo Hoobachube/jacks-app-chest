@@ -29,4 +29,4 @@
 
 ![](./sudoku.png)
 
-https://github.com/Hoobachube/jacks-app-chest/blob/master/design/Copy%20of%20scratch-pad.png
+![](https://github.com/Hoobachube/jacks-app-chest/blob/master/design/Copy%20of%20scratch-pad.png)
