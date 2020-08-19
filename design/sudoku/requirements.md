@@ -19,6 +19,7 @@
 #### Should Have
 
 1. Records wins and losses.
+1. A Scratch pad to help player work out psooble solutions.
 
 #### Nice to have
 
