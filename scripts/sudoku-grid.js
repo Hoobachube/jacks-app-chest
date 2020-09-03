@@ -9,6 +9,7 @@ class SudokuGrid {
     };
   }
 
+  //creating the main grid and internal grid lines.
   handleBoxClick(colNumber, rowNumber) {
     this.state.selected = { x: colNumber, y: rowNumber };
     this.render();
@@ -18,6 +19,7 @@ class SudokuGrid {
     const grid = document.getElementById(this.gridId);
     grid.innerHTML = "";
 
+    //modulo used to create borders for grids.
     for (let y = 0; y < 9; y++) {
       const row = document.createElement("div");
       row.classList.add("row");
@@ -55,5 +57,3 @@ class SudokuGrid {
     }
   }
 }
-
-//modulous operator %  x%3 === 0

@@ -51,3 +51,20 @@
 .selected {
   background-color: gray;
 }
+
+
+.button {
+ margin-top: 20px;
+ margin-left: 20px;
+ border-radius: 25px;
+ line-height: 60px;
+ font-weight: bold;
+ padding: 0 40px;
+ background-color: cornflowerblue;
+ border-color: black;
+ font-size: 40px;
+}
+
+.button:hover {
+  box-shadow: 0 7px 6px 0 rgb(37, 35, 35),0 16px 24px 0 rgb(37, 35, 35);
+}
