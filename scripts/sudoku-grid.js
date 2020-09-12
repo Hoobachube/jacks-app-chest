@@ -6,6 +6,7 @@ class SudokuGrid {
         x: -1,
         y: -1,
       },
+      grid: [],
     };
   }
 
@@ -15,14 +16,36 @@ class SudokuGrid {
     this.render();
   }
 
-  render() {
+  handleButtonClick(i) {
+
+    // To do: check if we have already assigned a value to these coordinates
+    // If we have, overwrtie it.
+    // Hint Use .find
+    this.state.grid.push({
+      x: this.state.selected.x,
+      y: this.state.selected.y,
+      value: i,
+    });
+    this.render();
+  }
+
+  renderButtons() {
+    for (let i = 0; i < 9; i++) {
+      const nb1 = document.createElement("button");
+      nb1.innerHTML = i + 1;
+      nb1.classList.add("btn", "btn-primary", "sudoku-button");
+      nb1.onclick = () => this.handleButtonClick(i + 1);
+      document.getElementById(this.gridId).appendChild(nb1);
+    }
+  }
+
+  renderCells() {
     const grid = document.getElementById(this.gridId);
     grid.innerHTML = "";
 
-    //modulo used to create borders for grids.
     for (let y = 0; y < 9; y++) {
       const row = document.createElement("div");
-      row.classList.add("row");
+      row.classList.add("sudoku-row");
 
       for (let x = 0; x < 9; x++) {
         const box = document.createElement("div");
@@ -48,6 +71,13 @@ class SudokuGrid {
           box.classList.add("selected");
         }
 
+        if (this.state.grid && this.state.grid.length > 0) {
+          const gridItem = this.state.grid.find((g) => g.x == x && g.y == y);
+          if (gridItem) {
+            box.innerHTML = gridItem.value;
+          }
+        }
+
         box.onclick = () => this.handleBoxClick(x, y);
 
         row.appendChild(box);
@@ -55,5 +85,19 @@ class SudokuGrid {
 
       grid.appendChild(row);
     }
+  }
+
+  renderSpace() {
+    var space = document.createElement("div");
+    space.classList.add("space");
+    document.getElementById(this.gridId).appendChild(space);
+  }
+
+  render() {
+    this.renderCells();
+
+    this.renderSpace();
+
+    this.renderButtons();
   }
 }
