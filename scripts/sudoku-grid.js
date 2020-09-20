@@ -33,7 +33,7 @@ class SudokuGrid {
     }
 
     this.render();
-   }
+  }
 
   renderButtons() {
     for (let i = 0; i < 9; i++) {
@@ -41,6 +41,9 @@ class SudokuGrid {
       nb1.innerHTML = i + 1;
       nb1.classList.add("btn", "btn-primary", "sudoku-button");
       nb1.onclick = () => this.handleButtonClick(i + 1);
+      if (this.state.selected.x == -1) {
+        nb1.disabled = true;
+      }
       document.getElementById(this.gridId).appendChild(nb1);
     }
   }
