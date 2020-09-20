@@ -10,7 +10,7 @@ class SudokuGrid {
     };
   }
 
-  //creating the main grid and internal grid lines.
+  
   handleBoxClick(colNumber, rowNumber) {
     this.state.selected = { x: colNumber, y: rowNumber };
     this.render();
