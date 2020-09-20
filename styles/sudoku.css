@@ -14,7 +14,11 @@
   align-self: center;
 }
 
-.row {
+.sudoku-grid-container {
+  margin: 0 25%;
+}
+
+.sudoku-row {
   clear: both;
   align-self: center;
 }
@@ -50,4 +54,23 @@
 
 .selected {
   background-color: gray;
+}
+
+.sudoku-button {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  line-height: 60px;
+  font-weight: bold;
+  padding: 0 13px;
+  font-size: 40px;
+}
+
+.button:hover {
+  box-shadow: 0 7px 6px 0 rgb(37, 35, 35), 0 16px 24px 0 rgb(37, 35, 35);
+}
+
+.space {
+  clear: both;
 }
