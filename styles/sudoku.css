@@ -60,12 +60,10 @@
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 25px;
+  border-radius: 10px;
   line-height: 60px;
   font-weight: bold;
-  padding: 0 40px;
-  background-color: cornflowerblue;
-  border-color: black;
+  padding: 0 13px;
   font-size: 40px;
 }
 

@@ -17,17 +17,23 @@ class SudokuGrid {
   }
 
   handleButtonClick(i) {
+    const exsistingItem = this.state.grid.find(
+      (item) =>
+        item.x == this.state.selected.x && item.y == this.state.selected.y
+    );
 
-    // To do: check if we have already assigned a value to these coordinates
-    // If we have, overwrtie it.
-    // Hint Use .find
-    this.state.grid.push({
-      x: this.state.selected.x,
-      y: this.state.selected.y,
-      value: i,
-    });
+    if (exsistingItem) {
+      exsistingItem.value = i;
+    } else {
+      this.state.grid.push({
+        x: this.state.selected.x,
+        y: this.state.selected.y,
+        value: i,
+      });
+    }
+
     this.render();
-  }
+   }
 
   renderButtons() {
     for (let i = 0; i < 9; i++) {
