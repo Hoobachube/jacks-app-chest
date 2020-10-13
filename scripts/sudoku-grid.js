@@ -8,9 +8,9 @@ class SudokuGrid {
       },
       grid: [],
     };
+    this.populateIntialValues();
   }
 
-  
   handleBoxClick(colNumber, rowNumber) {
     this.state.selected = { x: colNumber, y: rowNumber };
     this.render();
@@ -93,6 +93,19 @@ class SudokuGrid {
       }
 
       grid.appendChild(row);
+    }
+  }
+
+  populateIntialValues() {
+    for (let i = 0; i < 30; i++) {
+      const x = Math.floor(Math.random() * 8);
+      const y = Math.floor(Math.random() * 8);
+      const randNumber = Math.floor(Math.random() * 9) + 1;
+      this.state.grid.push({
+        x: x,
+        y: y,
+        value: randNumber,
+      });
     }
   }
 
