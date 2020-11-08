@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .traffic-light-box {
+        width: 200px;
+        height: 600px;
+        background-color: #353535;
+        margin: 20px auto;
+      }
+
+      .light-circles {
+        height: 150px;
+        width: 150px;
+        background-color: #bbb;
+        border-radius: 50%;
+        margin: 25px;
+        display: inline-block;
+      }
+
+      .light-box {
+        height: 550px;
+        width: 1350px;
+        background-color: #000066;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .lights {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #a6a6a6;
+        padding: 3px;
+        margin: 30px;
+      }
+
+      #RedLight {
+        background-color: #f01d13;
+      }
+
+      #AmberLight {
+        background-color: #f07b2b;
+      }
+
+      #GreenLight {
+        background-color: #09fa21;
+      }
+
+      #l1 {
+        background-color: #464dfa;
+      }
+
+      #l2 {
+        background-color: #f56e8a;
+      }
+
+      #l3 {
+        background-color: #4be397;
+      }
+
+      #l4 {
+        background-color: #faec46;
+      }
+
+      #l5 {
+        background-color: #f06933;
+      }
+
+      #l6 {
+        background-color: #30e620;
+      }
+
+      #l7 {
+        background-color: #f2050c;
+      }
+
+      #l8 {
+        background-color: #1799fc;
+      }
+
+      #l9 {
+        background-color: #7e43fa;
+      }
+
+      #l0 {
+        background-color: #fac618;
+      }
+
+      .off {
+        background-color: #bbb !important;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="traffic-light-box">
+      <div id="RedLight" class="light-circles"></div>
+      <div id="AmberLight" class="light-circles"></div>
+      <div id="GreenLight" class="light-circles"></div>
+    </div>
+
+    <div id="box" class="light-box">
+      <div id="l1" class="lights"></div>
+      <div id="l2" class="lights"></div>
+      <div id="l3" class="lights"></div>
+      <div id="l4" class="lights"></div>
+      <div id="l5" class="lights"></div>
+      <div id="l6" class="lights"></div>
+      <div id="l7" class="lights"></div>
+      <div id="l8" class="lights"></div>
+      <div id="l9" class="lights"></div>
+      <div id="l0" class="lights"></div>
+    </div>
+
+    <script>
+      function handleKeyUp(e) {
+        switch (e.key) {
+          case "r":
+            toggleLights("RedLight");
+            break;
+          case "a":
+            toggleLights("AmberLight");
+            break;
+          case "g":
+            toggleLights("GreenLight");
+            break;
+          case "1":
+            toggleLights("l1");
+            break;
+          case "2":
+            toggleLights("l2");
+            break;
+          case "3":
+            toggleLights("l3");
+            break;
+          case "4":
+            toggleLights("l4");
+            break;
+          case "5":
+            toggleLights("l5");
+            break;
+          case "6":
+            toggleLights("l6");
+            break;
+          case "7":
+            toggleLights("l7");
+            break;
+          case "8":
+            toggleLights("l8");
+            break;
+          case "9":
+            toggleLights("l9");
+            break;
+          case "0":
+            toggleLights("l0");
+            break;
+          default:
+            console.log("default");
+            break;
+        }
+      }
+
+      function toggleLights(lightId) {
+        const redLight = document.getElementById(lightId);
+
+        if (redLight.classList.contains("off")) {
+          redLight.classList.remove("off");
+        } else {
+          redLight.classList.add("off");
+        }
+      }
+
+      var pattern = ["l1", "l2", "l3", "l4", "l5", "l6", "l7", "l8", "l9"];
+
+      function disco(i) {
+        console.log(pattern[i]);
+        if (i < pattern.length) {
+          setTimeout(function () {
+            i++;
+            toggleLights(i);
+          }, 1000);
+        }
+      }
+
+      disco(0);
+
+      /*for (i = 0, i < pattern.length; i++; ) {
+        funtion(handleKeyUp);
+        {
+          setTimeout(() => {
+            console.log(pattern);
+            toggleLights();
+          }, 1000);
+        }
+        pattern[i];
+      } */
+
+      window.addEventListener("keyup", handleKeyUp);
+    </script>
+  </body>
+</html>

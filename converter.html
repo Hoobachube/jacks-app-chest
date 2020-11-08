@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-xs-12">
+          <form id="Converter" class="form-inline">
+            <label for="input" class="mr-sm-2">Input:</label>
+            <input
+              type="text"
+              class="form-control mb-2 mr-sm-2"
+              placeholder="Enter text"
+              id="input"
+            />
+            <div class="form-group">
+              <label for="sel1">Select convertion:</label>
+              <select class="form-control" id="sel1">
+                <option>grams - ounces</option>
+                <option>ounces - grams</option>
+                <option>Kilograms - pounds</option>
+                <option>pounds - grams</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary ml-3 mb-2">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="Results" class="alert alert-secondary"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const form = document.getElementById("Converter");
+      form.addEventListener("submit", function (evt) {
+        evt.preventDefault();
+        const val = document.getElementById("input").value;
+        const results = document.getElementById("Results");
+        results.innerHTML = val;
+      });
+    </script>
+  </body>
+</html>
