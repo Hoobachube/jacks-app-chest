@@ -173,14 +173,24 @@
         }
       }
 
-      var pattern = ["l1", "l2", "l3", "l4", "l5", "l6", "l7", "l8", "l9"];
+      var pattern = ["l1", "l2", "l3", "l4", "l5", "l6", "l7", "l8", "l9", "l0"];
 
-      function disco(i) {
-        console.log(pattern[i]);
+      let i = 0;
+
+      setInterval(disco, 1000);
+      function disco() {
+        if (i >= pattern.length) {
+          i = 0;
+        }
+        toggleLights(pattern[i]);
+        i++;
+      }
+      /* function disco(i) {
+        //console.log(pattern[i]);
         if (i < pattern.length) {
-          setTimeout(function () {
+          setInterval(function () {
             i++;
-            toggleLights(i);
+            toggleLights(pattern[0]);
           }, 1000);
         }
       }
@@ -190,7 +200,7 @@
       /*for (i = 0, i < pattern.length; i++; ) {
         funtion(handleKeyUp);
         {
-          setTimeout(() => {
+          setInterval((disco(pattern)) => {
             console.log(pattern);
             toggleLights();
           }, 1000);
