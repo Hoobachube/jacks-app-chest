@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      .light-box {
+        height: 260px;
+        width: 810px;
+        background-color: #000000;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .lights {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #000000;
+        padding: 3px;
+        margin: 30px;
+      }
+      #l1 {
+        background-color: #001aff;
+      }
+
+      #l2 {
+        background-color: #fa0000;
+      }
+
+      #l3 {
+        background-color: #14f500;
+      }
+      .off {
+        background-color: rgb(0, 0, 0) !important;
+      }
+    </style>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="box" class="light-box">
+      <div id="l1" class="lights"></div>
+      <div id="l2" class="lights"></div>
+      <div id="l3" class="lights off"></div>
+    </div>
+
+    <script>
+      function sequence(e) {
+        switch (e) {
+          case "1":
+            toggleLights("l1");
+            break;
+          case "2":
+            toggleLights("l2");
+            break;
+          case "3":
+            toggleLights("l3");
+            break;
+        }
+      }
+
+      function toggleLights(lightId) {
+        const discoLight = document.getElementById(lightId);
+
+        if (discoLight.classList.contains("off")) {
+          discoLight.classList.remove("off");
+        } else {
+          discoLight.classList.add("off");
+        }
+      }
+
+      var light1 = ["l1"];
+
+      let i = 0;
+
+      setInterval(first, 1000);
+      function first() {
+        if (i >= light1.length) {
+          i = 0;
+        }
+        toggleLights(light1[i]);
+        i++;
+      }
+
+      var light2 = ["l2"];
+
+      let l = 0;
+
+      setInterval(second, 4000);
+
+      function second() {
+        if (i >= light2.length) {
+          i = 0;
+        }
+
+        toggleLights(light2[i]);
+        i++;
+      }
+
+      var light3 = ["l3"];
+
+      let m = 0;
+
+      setInterval(third, 3000);
+      setInterval(third, 4000);
+      function third() {
+        if (i >= light3.length) {
+          i = 0;
+        }
+        toggleLights(light3[i]);
+        i++;
+      }
+    </script>
+  </body>
+</html>
